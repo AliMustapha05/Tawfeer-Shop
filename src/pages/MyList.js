@@ -16,7 +16,10 @@ function MyList({ cartItems, updateQuantity, removeFromCart, clearCart }) {
   };
 
   return (
-    <main>
+    <main style={{
+      minHeight: '100vh',
+      padding: '20px'
+    }}>
       <h2>My List</h2>
       {cartItems.length === 0 ? (
         <p>Your shopping list is empty. Add some products from the Home page!</p>
