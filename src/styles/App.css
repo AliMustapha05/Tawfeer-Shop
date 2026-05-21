@@ -1,11 +1,10 @@
-/* Fix all background images for GitHub Pages */
 body.loginPage {
     font-family: Arial, sans-serif;
     align-items: center;
     justify-content: center;
     display: flex;
     height: 100vh;
-    background-image: url("/Tawfeer-Shop/images/Backgrounds/loginBackground.png");
+    background-image: url("../../public/images/Backgrounds/loginBackground.png");
     background-repeat: no-repeat;            
     background-size: cover;                  
     background-position: center;
@@ -17,7 +16,7 @@ body.signUpPage {
     justify-content: center;
     display: flex;
     height: 100vh;
-    background-image: url("/Tawfeer-Shop/images/Backgrounds/signUpBackground.png");
+    background-image: url("../../public/images/Backgrounds/signUpBackground.png");
     background-repeat: no-repeat;            
     background-size: cover;                  
     background-position: center;
@@ -114,7 +113,7 @@ body.signUpPage {
     padding: 0;
     padding-top: 90px;
     min-height: 100vh;
-    background-image: url("/Tawfeer-Shop/images/Backgrounds/superMarketBackground.jpg");
+    background-image: url("../../public/images/Backgrounds/superMarketBackground.jpg");
     background-size: cover;       
     background-repeat: no-repeat; 
     background-attachment: fixed; 
