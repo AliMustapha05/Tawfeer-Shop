@@ -20,6 +20,7 @@ body.signUpPage {
     background-repeat: no-repeat;            
     background-size: cover;                  
     background-position: center;
+    
 }
 
 .forms {
@@ -451,6 +452,7 @@ body.signUpPage {
         margin-top: auto;
         width: 100%;
         box-sizing: border-box;
+        
     }           
 }
 @media (min-width: 1400px) {

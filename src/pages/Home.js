@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import SearchBar from '../components/SearchBar';
 import productsData from '../data/productsData';
 
-function Home({ addToCart }) {
+function Home({ addToCart, currentUser }) {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProducts, setFilteredProducts] = useState({
     pantryStaples: productsData.pantryStaples,
@@ -39,6 +41,16 @@ function Home({ addToCart }) {
     });
   };
 
+  const handleAddToCart = (product) => {
+    if (!currentUser) {
+      alert('Please login first to add items to your list!');
+      navigate('/login');
+      return;
+    }
+    addToCart(product);
+    alert(`${product.name} added to your list!`);
+  };
+
   const CategorySection = ({ title, products }) => {
     if (products.length === 0) return null;
     return (
@@ -49,7 +61,7 @@ function Home({ addToCart }) {
             <ProductCard 
               key={product.id} 
               product={product} 
-              onAddToCart={addToCart} 
+              onAddToCart={handleAddToCart} 
             />
           ))}
         </div>
@@ -60,6 +72,11 @@ function Home({ addToCart }) {
   return (
     <main>
       <h2>Products</h2>
+      {!currentUser && (
+        <p style={{ backgroundColor: '#ff9800', color: 'white', padding: '10px', textAlign: 'center', borderRadius: '5px' }}>
+          ⚠️ Please login to add items to your shopping list!
+        </p>
+      )}
       <SearchBar onSearch={handleSearch} />
       
       {searchTerm && filteredProducts.pantryStaples.length === 0 && 
