@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Tawfeer-Shop/static/css/main.8f2354ae.css",
+    "main.css": "/Tawfeer-Shop/static/css/main.184895d9.css",
     "main.js": "/Tawfeer-Shop/static/js/main.a31d29c7.js",
     "static/media/signUpBackground.png": "/Tawfeer-Shop/static/media/signUpBackground.7e66bbfaabcb3c8b264a.png",
     "static/media/loginBackground.png": "/Tawfeer-Shop/static/media/loginBackground.9d9e24ad9f5ae0f8c504.png",
     "static/media/superMarketBackground.jpg": "/Tawfeer-Shop/static/media/superMarketBackground.90da8b643e664a2dfdc6.jpg",
     "index.html": "/Tawfeer-Shop/index.html",
-    "main.8f2354ae.css.map": "/Tawfeer-Shop/static/css/main.8f2354ae.css.map",
+    "main.184895d9.css.map": "/Tawfeer-Shop/static/css/main.184895d9.css.map",
     "main.a31d29c7.js.map": "/Tawfeer-Shop/static/js/main.a31d29c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f2354ae.css",
+    "static/css/main.184895d9.css",
     "static/js/main.a31d29c7.js"
   ]
 }
