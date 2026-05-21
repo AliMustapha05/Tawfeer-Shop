@@ -1,10 +1,11 @@
+/* Fix all background images for GitHub Pages */
 body.loginPage {
     font-family: Arial, sans-serif;
     align-items: center;
     justify-content: center;
     display: flex;
     height: 100vh;
-    background-image: url("../../public/images/Backgrounds/loginBackground.png");
+    background-image: url("/Tawfeer-Shop/images/Backgrounds/loginBackground.png");
     background-repeat: no-repeat;            
     background-size: cover;                  
     background-position: center;
@@ -16,11 +17,10 @@ body.signUpPage {
     justify-content: center;
     display: flex;
     height: 100vh;
-    background-image: url("../../public/images/Backgrounds/signUpBackground.png");
+    background-image: url("/Tawfeer-Shop/images/Backgrounds/signUpBackground.png");
     background-repeat: no-repeat;            
     background-size: cover;                  
     background-position: center;
-    
 }
 
 .forms {
@@ -32,620 +32,583 @@ body.signUpPage {
     margin: 0 auto;
     max-width: 90vw;
     min-height: fit-content;
-
-    h2 {
-        color: #2d3536;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-
-    label {
-        font-size: 16px;
-        display: flex;
-        margin-top: 5px;
-    }
-
-    input {
-        width: 100%;
-        padding: 10px;
-        margin: 8px 0;
-        border: 1px solid;
-        border-radius: 8px;
-        box-sizing: border-box;
-        font-size: 14px;
-    }
-
-    button {
-        width: 100%;
-        padding: 10px;
-        border-radius: 8px;
-        background-color: #1ae31a;
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-        margin: 5px 0;
-    }
-
-    button:hover {
-        background-color: rgb(12, 203, 12);
-    }
-
-    .checkBlock {
-        display: flex;        
-        align-items: center ;  
-        gap: 8px;   
-        width: 100%;
-
-        label{
-            display: flex;        
-            align-items: center ;  
-            gap: 8px;              
-            font-size: 14px;
-            cursor: pointer;
-            white-space: nowrap;
-            margin: 0;
-        }
-    }
-
-    p {
-        font-style: static;
-        font-size: 15px;
-        margin: 20px 0;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
 }
 
+.forms h2 {
+    color: #2d3536;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.forms label {
+    font-size: 16px;
+    display: flex;
+    margin-top: 5px;
+}
+
+.forms input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.forms button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #1ae31a;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.forms button:hover {
+    background-color: rgb(12, 203, 12);
+}
+
+.forms .checkBlock {
+    display: flex;        
+    align-items: center;  
+    gap: 8px;   
+    width: 100%;
+}
+
+.forms .checkBlock label {
+    display: flex;        
+    align-items: center;  
+    gap: 8px;              
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.forms p {
+    font-style: static;
+    font-size: 15px;
+    margin: 20px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.forms a {
+    text-decoration: none;
+}
+
+.forms a:hover {
+    text-decoration: underline;
+}
+
+/* Main App Styles */
 .App {
     font-family: Tahoma, Arial, sans-serif;
     direction: ltr;
     margin: 0;
     padding: 0;
     padding-top: 90px;
-    flex-direction: column;
     min-height: 100vh;
-    background-image: url(../../public/images/Backgrounds/superMarketBackground.jpg);
+    background-image: url("/Tawfeer-Shop/images/Backgrounds/superMarketBackground.jpg");
     background-size: cover;       
     background-repeat: no-repeat; 
     background-attachment: fixed; 
     background-position: center;
-     
-    header {
-        background: #8BC34A;
-        color: white;
-        padding: 15px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        box-sizing: border-box;
-
-        h1 {
-            margin: 0;
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            flex-shrink: 0;
-        }
-
-        nav {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-
-            a {
-                color: white;
-                text-decoration: none;
-                padding: 8px 12px;
-                font-size: clamp(14px, 2vw, 16px);
-                white-space: nowrap;
-                border-radius: 4px;
-                transition: background-color 0.3s;
-            }
-            
-            a:hover {
-                text-decoration: underline;
-                background-color: rgba(255,255,255,0.1);
-            }
-        }   
-    }    
-
-    main {
-        padding: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-        width: 100%;
-        box-sizing: border-box;
-        flex: 1;
-
-        h2 {
-            margin-top: 30px;
-            margin-bottom: 20px;
-            color: black;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-            font-size: clamp(1.5rem, 5vw, 2rem);
-            text-align: left;
-        }
-
-        button {
-            background: #28a745;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: clamp(14px, 2vw, 16px);
-            transition: background-color 0.3s;
-
-            &:hover {
-                background: #218838;
-            }
-        }
-
-        p {
-            font-weight: bold;       
-            font-size: clamp(14px, 3vw, 18px);         
-            margin: 15px 0;     
-            padding: 8px 12px;      
-            background-color: #f3d4a17d; 
-            color: rgb(98, 4, 4);
-            border-radius: 5px;     
-            display: inline-block;  
-        }
-
-        .searchBar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto;
-            gap: 10px;
-            flex-wrap: wrap;
-            max-width: 500px;
-            width: 100%;
-
-            input {
-                flex: 1;
-                min-width: clamp(250px, 70vw, 300px);
-                max-width: 400px;
-                padding: 10px 12px;
-                border: 1px solid #ccc;
-                border-radius: 8px;
-                font-size: 14px;
-                outline: none;
-                transition: 0.3s;
-                box-sizing: border-box;
-
-                &:focus {
-                    border-color: #28a745;
-                    box-shadow: 0 0 5px rgba(40, 167, 69, 0.4);
-                }
-            }
-
-            button {
-                padding: 10px 15px;
-                background: #28a745;
-                color: white;
-                border: none;
-                border-radius: 8px;
-                cursor: pointer;
-                font-size: 14px;
-                transition: 0.3s;
-                white-space: nowrap;
-                flex-shrink: 0;
-
-                &:hover {
-                    background: #218838;
-                }
-            }
-        }
-
-        .categoryTitle {
-            grid-column: 1 / -1;
-            font-size: clamp(1.25rem, 4vw, 1.75rem);
-            font-weight: bold;
-            color: rgb(67, 66, 66);
-            margin: 40px 0 20px 0;
-            padding: 15px 20px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-left: 5px solid #8BC34A;
-        }
-
-        .productsContainer {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px 0;
-            justify-items: center;
-            width: 100%;
-        }
-
-        .productCard {
-            background: rgba(255, 255, 255, 0.85);
-            width: 100%;
-            max-width: 280px;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            box-sizing: border-box;
-            transition: transform 0.3s, box-shadow 0.3s;
-
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            }
-
-            img {
-                width: 100%;
-                height: 180px;
-                object-fit: cover;
-                border-radius: 10px;
-                margin-bottom: 15px;
-            }
-
-            h3 {
-                margin: 10px 0 15px 0;
-                font-size: clamp(14px, 3vw, 20px);
-                flex-grow: 1;
-            }
-
-            .price {
-                font-size: 18px;
-                font-weight: bold;
-                color: #000;
-                margin-bottom: 15px;
-            }
-
-            button {
-                background: #28a745;
-                color: white;
-                border: none;
-                padding: 12px;
-                border-radius: 6px;
-                cursor: pointer;
-                width: 100%;
-                font-size: clamp(12px, 2.5vw, 14px);
-                transition: background-color 0.3s;
-
-                &:hover {
-                    background: #218838;
-                }
-            }
-        }
-
-        .cartCard {
-            background: #ffffff90;
-            width: 100%;
-            max-width: 280px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-
-            img {
-                width: 100%;
-                height: 160px;
-                object-fit: cover;
-                border-radius: 8px;
-                margin-bottom: 15px;
-            }
-
-            .cartInfo {
-                flex-grow: 1;
-                display: flex;
-                flex-direction: column;
-
-                h3 {
-                    margin: 0 0 15px 0;
-                    font-size: clamp(14px, 3vw, 20px);
-                }
-
-                .priceRow {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin: 15px 0;
-                    flex-wrap: wrap;
-                    gap: 10px;
-
-                    .price {
-                        font-weight: bold;
-                        font-size: 18px;
-                        color: #28a745;
-                    }
-
-                    .quantityControl {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 8px;
-
-                        button {
-                            width: 32px;
-                            height: 32px;
-                            border: none;
-                            background: #28a745;
-                            color: white;
-                            border-radius: 5px;
-                            cursor: pointer;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-size: 16px;
-                            flex-shrink: 0;
-                            transition: background-color 0.3s;
-
-                            &:hover {
-                                background: #218838;
-                            }
-                        }
-
-                        span {
-                            font-weight: bold;
-                            font-size: clamp(14px, 2.5vw, 16px);
-                            min-width: 20px;
-                            text-align: center;
-                        }
-                    }
-                }
-
-                .total {
-                    font-weight: bold;
-                    margin: 15px 0 0 0;
-                    color: black;
-                    font-size: clamp(16px, 3vw, 18px);
-                    text-align: center;
-                }
-            }
-
-            .deleteBtn {
-                width: 100%;
-                margin-top: 15px;
-                padding: 12px;
-                background: red;
-                color: white;
-                border: none;
-                border-radius: 6px;
-                cursor: pointer;
-                font-size: clamp(14px, 2.5vw, 16px);
-                transition: background-color 0.3s;
-
-                &:hover {
-                    background: darkred;
-                }
-            }
-        }
-    }
-
-    footer {
-        background: #8BC34A;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        font-size: clamp(12px, 3vw, 14px);
-        margin-top: auto;
-        width: 100%;
-        box-sizing: border-box;
-        
-    }           
 }
+
+.App header {
+    background: #8BC34A;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.App header h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    flex-shrink: 0;
+}
+
+.App header nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.App header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: clamp(14px, 2vw, 16px);
+    white-space: nowrap;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.App header nav a:hover {
+    text-decoration: underline;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.App main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.App main h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: black;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    text-align: left;
+}
+
+.App main button {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(14px, 2vw, 16px);
+    transition: background-color 0.3s;
+}
+
+.App main button:hover {
+    background: #218838;
+}
+
+.App main p {
+    font-weight: bold;       
+    font-size: clamp(14px, 3vw, 18px);         
+    margin: 15px 0;     
+    padding: 8px 12px;      
+    background-color: #f3d4a17d; 
+    color: rgb(98, 4, 4);
+    border-radius: 5px;     
+    display: inline-block;  
+}
+
+.App main .searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 500px;
+    width: 100%;
+}
+
+.App main .searchBar input {
+    flex: 1;
+    min-width: clamp(250px, 70vw, 300px);
+    max-width: 400px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.App main .searchBar input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.4);
+}
+
+.App main .searchBar button {
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.App main .searchBar button:hover {
+    background: #218838;
+}
+
+.App main .categoryTitle {
+    grid-column: 1 / -1;
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    font-weight: bold;
+    color: rgb(67, 66, 66);
+    margin: 40px 0 20px 0;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid #8BC34A;
+}
+
+.App main .productsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    justify-items: center;
+    width: 100%;
+}
+
+.App main .productCard {
+    background: rgba(255, 255, 255, 0.85);
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.App main .productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.App main .productCard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.App main .productCard h3 {
+    margin: 10px 0 15px 0;
+    font-size: clamp(14px, 3vw, 20px);
+    flex-grow: 1;
+}
+
+.App main .productCard .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.App main .productCard button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: clamp(12px, 2.5vw, 14px);
+    transition: background-color 0.3s;
+}
+
+.App main .productCard button:hover {
+    background: #218838;
+}
+
+/* Cart Card Styles - IMPORTANT FOR MY LIST */
+.App main .cartCard {
+    background: #ffffff90;
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.App main .cartCard img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.App main .cartCard .cartInfo {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.App main .cartCard .cartInfo h3 {
+    margin: 0 0 15px 0;
+    font-size: clamp(14px, 3vw, 20px);
+}
+
+.App main .cartCard .cartInfo .priceRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.App main .cartCard .cartInfo .priceRow .price {
+    font-weight: bold;
+    font-size: 18px;
+    color: #28a745;
+}
+
+.App main .cartCard .cartInfo .priceRow .quantityControl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.App main .cartCard .cartInfo .priceRow .quantityControl button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    transition: background-color 0.3s;
+}
+
+.App main .cartCard .cartInfo .priceRow .quantityControl button:hover {
+    background: #218838;
+}
+
+.App main .cartCard .cartInfo .priceRow .quantityControl span {
+    font-weight: bold;
+    font-size: clamp(14px, 2.5vw, 16px);
+    min-width: 20px;
+    text-align: center;
+}
+
+.App main .cartCard .cartInfo .total {
+    font-weight: bold;
+    margin: 15px 0 0 0;
+    color: black;
+    font-size: clamp(16px, 3vw, 18px);
+    text-align: center;
+}
+
+.App main .cartCard .deleteBtn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: clamp(14px, 2.5vw, 16px);
+    transition: background-color 0.3s;
+}
+
+.App main .cartCard .deleteBtn:hover {
+    background: darkred;
+}
+
+.App footer {
+    background: #8BC34A;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: clamp(12px, 3vw, 14px);
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive Styles */
 @media (min-width: 1400px) {
-    body.homePages {
-        main {
-            max-width: 1400px;
-            
-            .productsContainer {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
+    .App main {
+        max-width: 1400px;
+    }
+    .App main .productsContainer {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 1199px) and (min-width: 769px) {
-    body.homePages {
-        main {
-            .productsContainer {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 18px;
-            }
-        }
+    .App main .productsContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
     }
 }
 
 @media (max-width: 1023px) {
-    body.homePages {
+    .App {
         padding-top: 80px;
-        
-        header {
-            padding: 12px 15px;
-            gap: 8px;
-        }
-        
-        main {
-            padding: 15px;
-            
-            .productsContainer {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-        }
+    }
+    .App header {
+        padding: 12px 15px;
+        gap: 8px;
+    }
+    .App main {
+        padding: 15px;
+    }
+    .App main .productsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }
 
 @media (max-width: 767px) {
-    body.homePages {
+    .App {
         padding-top: 70px;
-        
-        header {
-            flex-direction: column;
-            text-align: center;
-            padding: 12px 15px;
-            gap: 12px;
-            
-            h1 {
-                order: 2;
-            }
-            
-            nav {
-                order: 1;
-                width: 100%;
-                justify-content: center;
-                gap: 10px;
-            }
-        }
-        
-        main {
-            padding: 12px;
-            
-            .productsContainer {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-                padding: 0;
-            }
-            
-            .searchBar {
-                flex-direction: column;
-                gap: 12px;
-                
-                input {
-                    width: 100%;
-                    max-width: none;
-                }
-            }
-        }
+    }
+    .App header {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 15px;
+        gap: 12px;
+    }
+    .App header h1 {
+        order: 2;
+    }
+    .App header nav {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+    .App main {
+        padding: 12px;
+    }
+    .App main .productsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0;
+    }
+    .App main .searchBar {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .App main .searchBar input {
+        width: 100%;
+        max-width: none;
     }
 }
 
 @media (max-width: 480px) {
-    body.homePages {
+    .App {
         padding-top: 60px;
         background-attachment: scroll;
-        
-        header {
-            padding: 10px 12px;
-            
-            nav {
-                gap: 8px;
-                
-                a {
-                    padding: 6px 10px;
-                    font-size: 14px;
-                }
-            }
-        }
-        
-        main {
-            padding: 10px;
-            
-            h2 {
-                margin-top: 20px;
-                font-size: clamp(1.25rem, 6vw, 1.75rem);
-            }
-            
-            .productsContainer {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-            
-            .productCard,
-            .cartCard {
-                max-width: none;
-                width: 100%;
-            }
-            
-            .searchBar {
-                margin: 15px 0;
-            }
-        }
-        
-        footer {
-            padding: 15px 12px;
-        }
     }
-    
+    .App header {
+        padding: 10px 12px;
+    }
+    .App header nav {
+        gap: 8px;
+    }
+    .App header nav a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    .App main {
+        padding: 10px;
+    }
+    .App main h2 {
+        margin-top: 20px;
+        font-size: clamp(1.25rem, 6vw, 1.75rem);
+    }
+    .App main .productsContainer {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .App main .productCard,
+    .App main .cartCard {
+        max-width: none;
+        width: 100%;
+    }
+    .App main .searchBar {
+        margin: 15px 0;
+    }
+    .App footer {
+        padding: 15px 12px;
+    }
     .forms {
         padding: 25px 20px;
         margin: 20px auto;
         width: 95vw;
         max-width: 400px;
-        
-        h2 {
-            font-size: clamp(1.5rem, 8vw, 1.75rem);
-        }
-        
-        label,
-        input,
-        button {
-            font-size: clamp(14px, 5vw, 16px);
-        }
-        
-        .checkBlock {
-            label {
-                font-size: clamp(12px, 4.5vw, 14px);
-            }
-        }
+    }
+    .forms h2 {
+        font-size: clamp(1.5rem, 8vw, 1.75rem);
+    }
+    .forms label,
+    .forms input,
+    .forms button {
+        font-size: clamp(14px, 5vw, 16px);
+    }
+    .forms .checkBlock label {
+        font-size: clamp(12px, 4.5vw, 14px);
     }
 }
 
 @media (max-width: 360px) {
-    body.homePages {
+    .App {
         padding-top: 55px;
-        
-        header {
-            padding: 8px 10px;
-            
-            h1 {
-                font-size: clamp(1.25rem, 5vw, 1.5rem);
-            }
-        }
-        
-        main {
-            padding: 8px;
-            
-            .searchBar {
-                margin: 15px 0;
-            }
-        }
     }
-    
+    .App header {
+        padding: 8px 10px;
+    }
+    .App header h1 {
+        font-size: clamp(1.25rem, 5vw, 1.5rem);
+    }
+    .App main {
+        padding: 8px;
+    }
+    .App main .searchBar {
+        margin: 15px 0;
+    }
     .categoryTitle {
         margin: 30px 10px 15px 10px;
         padding: 12px 15px;
         font-size: clamp(1.1rem, 6vw, 1.5rem);
     }
-    
     .forms {
         padding: 20px 15px;
         border-radius: 12px;
-        
-        p {
-            font-size: clamp(13px, 5vw, 15px);
-        }
+    }
+    .forms p {
+        font-size: clamp(13px, 5vw, 15px);
     }
 }
