@@ -74,7 +74,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/Tawfeer-Shop">
       <div className="App">
         <Header />
         <Routes>
@@ -91,6 +91,8 @@ function App() {
           } />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          {/* Catch all route - redirect to home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
       </div>
