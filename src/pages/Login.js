@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import "../styles/Login.css"
+
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -63,7 +65,7 @@ function Login() {
   };
 
   return (
-    <div
+    <div className="login-page"
       style={{
         minHeight: "100vh",
         padding: "20px"

@@ -1,0 +1,108 @@
+
+.login-page {
+  min-height: calc(100vh - 90px);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #edf5e9;
+  background-image: url("../../public/images/Backgrounds/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-page .forms {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 340px;
+  max-width: 90vw;
+}
+
+.login-page .forms h2 {
+  color: #2d3536;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.login-page .forms label {
+  font-size: 16px;
+  display: flex;
+  margin-top: 5px;
+}
+
+.login-page .forms input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #888;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.login-page .forms button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background: #1ae31a;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.login-page .forms button:hover {
+  background: #0ccb0c;
+}
+
+.login-page .forms button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.login-page .forms .cancel-btn {
+  background: #777;
+  color: white;
+}
+
+.login-page .checkBlock label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.login-page .forms p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.login-page .forms .form-error {
+  color: #a00000;
+}
+
+.login-page .forms .notice {
+  color: #4d3700;
+  background: #fff1b8;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.login-page .forms a {
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 25px 15px;
+  }
+
+  .login-page .forms {
+    width: 100%;
+    padding: 25px 20px;
+  }
+}

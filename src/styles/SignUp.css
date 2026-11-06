@@ -1,0 +1,96 @@
+
+.signup-page {
+  min-height: calc(100vh - 90px);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #edf5e9;
+  background-image: url("../../public/images/Backgrounds/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.signup-page .forms {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 380px;
+  max-width: 90vw;
+}
+
+.signup-page .forms h2 {
+  color: #2d3536;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.signup-page .forms label {
+  font-size: 16px;
+  display: flex;
+  margin-top: 5px;
+}
+
+.signup-page .forms input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #888;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.signup-page .forms button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background: #1ae31a;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.signup-page .forms button:hover {
+  background: #0ccb0c;
+}
+
+.signup-page .forms button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.signup-page .checkBlock label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.signup-page .forms p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.signup-page .forms .form-error {
+  color: #a00000;
+}
+
+.signup-page .forms a {
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .signup-page {
+    padding: 25px 15px;
+  }
+
+  .signup-page .forms {
+    width: 100%;
+    padding: 25px 20px;
+  }
+}

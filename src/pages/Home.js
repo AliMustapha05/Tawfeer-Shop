@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import SearchBar from '../components/SearchBar';
 import productsData from '../data/productsData';
+import "../styles/Home.css"
+
 
 function Home({ addToCart, currentUser }) {
   const navigate = useNavigate();
@@ -70,7 +72,7 @@ function Home({ addToCart, currentUser }) {
   };
 
   return (
-    <main>
+    <main className="home-page">
       <h2>Products</h2>
       {!currentUser && (
         <p style={{ backgroundColor: '#ff9800', color: 'white', padding: '10px', textAlign: 'center', borderRadius: '5px' }}>

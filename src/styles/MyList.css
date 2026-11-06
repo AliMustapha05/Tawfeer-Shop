@@ -1,0 +1,166 @@
+
+.my-list-page {
+  min-height: calc(100vh - 90px);
+  padding: 20px;
+  background-color: #f4f8ef;
+  background-image: url("../../public/images/Backgrounds/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.my-list-page h2 {
+  margin: 30px 0 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.my-list-page .productsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+  justify-items: center;
+}
+
+.my-list-page .cartCard {
+  background: rgba(255, 255, 255, 0.88);
+  width: 100%;
+  max-width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.my-list-page .cartCard img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.my-list-page .cartInfo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-list-page .cartInfo h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+}
+
+.my-list-page .priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.my-list-page .price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #28a745;
+}
+
+.my-list-page .quantityControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.my-list-page button {
+  background: #28a745;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.my-list-page button:hover {
+  background: #218838;
+}
+
+.my-list-page .quantityControl button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.my-list-page .quantityControl span {
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+.my-list-page .total {
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.my-list-page .cartCard .deleteBtn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: red;
+}
+
+.my-list-page .cartCard .deleteBtn:hover {
+  background: darkred;
+}
+
+.my-list-page .list-summary {
+  background: rgba(255, 255, 255, 0.88);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.my-list-page p {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 12px;
+  border-radius: 6px;
+}
+
+@media (max-width: 1199px) {
+  .my-list-page .productsContainer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .my-list-page .productsContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .my-list-page {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-list-page {
+    padding: 10px;
+  }
+
+  .my-list-page .productsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .my-list-page .cartCard {
+    max-width: 100%;
+  }
+}

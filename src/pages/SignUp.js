@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import "../styles/SignUp.css"
+
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -90,7 +92,7 @@ function SignUp() {
   };
 
   return (
-    <div
+    <div className="signup-page"
       style={{
         minHeight: "100vh",
         padding: "20px"

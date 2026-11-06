@@ -1,5 +1,6 @@
 import React from 'react';
 import CartCard from '../components/CartCard';
+import "../styles/MyList.css"
 
 function MyList({ cartItems, updateQuantity, removeFromCart, clearCart }) {
   const totalAmount = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -16,7 +17,7 @@ function MyList({ cartItems, updateQuantity, removeFromCart, clearCart }) {
   };
 
   return (
-    <main style={{
+    <main className="my-list-page" style={{
       minHeight: '100vh',
       padding: '20px'
     }}>
