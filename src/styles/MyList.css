@@ -1,6 +1,6 @@
 
 .my-list-page {
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - 64px);
   padding: 20px;
   background-color: #f4f8ef;
   background-image: url("../../public/images/Backgrounds/Background.png");
@@ -12,8 +12,10 @@
 
 .my-list-page h2 {
   margin: 30px 0 20px;
+  color: black;
   border-bottom: 2px solid #ccc;
   padding-bottom: 5px;
+  font-size: 28px;
 }
 
 .my-list-page .productsContainer {
@@ -22,6 +24,7 @@
   gap: 20px;
   padding: 20px 0;
   justify-items: center;
+  width: 100%;
 }
 
 .my-list-page .cartCard {
@@ -33,6 +36,12 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.my-list-page .cartCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .my-list-page .cartCard img {
@@ -52,6 +61,7 @@
 .my-list-page .cartInfo h3 {
   margin: 0 0 15px;
   font-size: 18px;
+  color: black;
 }
 
 .my-list-page .priceRow {
@@ -72,7 +82,45 @@
 .my-list-page .quantityControl {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+}
+
+.my-list-page .quantityControl button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.my-list-page .quantityControl button:hover {
+  background: #218838;
+}
+
+.my-list-page .quantityControl span {
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.my-list-page .cartInfo .total {
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 6px;
 }
 
 .my-list-page button {
@@ -82,28 +130,12 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
 }
 
 .my-list-page button:hover {
   background: #218838;
-}
-
-.my-list-page .quantityControl button {
-  width: 32px;
-  height: 32px;
-  padding: 0;
-}
-
-.my-list-page .quantityControl span {
-  font-weight: bold;
-  min-width: 20px;
-  text-align: center;
-}
-
-.my-list-page .total {
-  font-weight: bold;
-  margin-top: 15px;
-  text-align: center;
 }
 
 .my-list-page .cartCard .deleteBtn {
@@ -111,28 +143,49 @@
   margin-top: 15px;
   padding: 12px;
   background: red;
+  color: white;
 }
 
 .my-list-page .cartCard .deleteBtn:hover {
   background: darkred;
 }
 
-.my-list-page .list-summary {
-  background: rgba(255, 255, 255, 0.88);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+.my-list-page > p {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 12px 20px;
+  margin: 20px 0 15px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.my-list-page p {
-  background: rgba(255, 255, 255, 0.6);
-  padding: 12px;
+.my-list-page > button {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 12px 25px;
   border-radius: 6px;
+  font-weight: bold;
+}
+
+.my-list-page > button:first-of-type {
+  background-color: #dc3545;
+}
+
+.my-list-page > button:first-of-type:hover {
+  background-color: #c82333;
+}
+
+.my-list-page > button:last-of-type {
+  background-color: #28a745;
+}
+
+.my-list-page > button:last-of-type:hover {
+  background-color: #218838;
 }
 
 @media (max-width: 1199px) {
@@ -156,11 +209,25 @@
     padding: 10px;
   }
 
+  .my-list-page h2 {
+    font-size: 24px;
+  }
+
   .my-list-page .productsContainer {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .my-list-page .cartCard {
     max-width: 100%;
+  }
+
+  .my-list-page > button {
+    margin-right: 10px;
+    padding: 10px 20px;
+  }
+
+  .my-list-page > p {
+    font-size: 16px;
   }
 }
