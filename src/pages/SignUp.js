@@ -1,19 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function SignUp() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    phone: '',
-    address: ''
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    phone: "",
+    address: ""
   });
+
   const [showPasswords, setShowPasswords] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
   const { signup } = useAuth();
 
@@ -26,143 +29,180 @@ function SignUp() {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
     setLoading(true);
 
-    if (!formData.name || !formData.email || !formData.password || !formData.phone || !formData.address) {
-      setError('Please fill in all fields');
-      setLoading(false);
-      return;
-    }
-    
-    if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
-      setLoading(false);
-      return;
-    }
-    
-    if (formData.password.length < 6) {
-      setError('Password must be at least 6 characters');
-      setLoading(false);
-      return;
-    }
+    try {
+      if (
+        !formData.name.trim() ||
+        !formData.email.trim() ||
+        !formData.password ||
+        !formData.confirmPassword ||
+        !formData.phone.trim() ||
+        !formData.address.trim()
+      ) {
+        setError("Please fill in all fields");
+        return;
+      }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      setError('Please enter a valid email address');
+      if (formData.password !== formData.confirmPassword) {
+        setError("Passwords do not match");
+        return;
+      }
+
+      if (formData.password.length < 8) {
+        setError("Password must be at least 8 characters");
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(formData.email)) {
+        setError("Please enter a valid email address");
+        return;
+      }
+
+      const newUser = {
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+        phone: formData.phone,
+        address: formData.address
+      };
+
+      const success = await signup(newUser);
+
+      if (success) {
+        alert("Registration successful! Please login.");
+        navigate("/login");
+      } else {
+        setError(
+          "Email already registered. Please use a different email or login."
+        );
+      }
+    } catch (err) {
+      setError(
+        "Unable to create account. Please try again."
+      );
+    } finally {
       setLoading(false);
-      return;
     }
-    
-    const newUser = {
-      name: formData.name,
-      email: formData.email,
-      password: formData.password,
-      phone: formData.phone,
-      address: formData.address
-    };
-    
-    const success = signup(newUser);
-    
-    if (success) {
-      alert('Registration successful! Please login.');
-      navigate('/login');
-    } else {
-      setError('Email already registered. Please use a different email or login.');
-    }
-    setLoading(false);
   };
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      padding: '20px'
-    }}>
-      <div className="forms" style={{ margin: '0 auto' }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        padding: "20px"
+      }}
+    >
+      <div className="forms" style={{ margin: "0 auto" }}>
         <Link to="/">&lt;&lt; Go Home</Link>
+
         <h2>Sign Up</h2>
-        
+
         <form onSubmit={handleSignUp}>
-          <label>Full Name:</label>
-          <input 
-            type="text" 
+          <label htmlFor="name">Full Name:</label>
+
+          <input
+            type="text"
             id="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Enter your full name" 
+            placeholder="Enter your full name"
+            autoComplete="name"
             required
           />
-          
-          <label>Email:</label>
-          <input 
-            type="email" 
+
+          <label htmlFor="email">Email:</label>
+
+          <input
+            type="email"
             id="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Enter your email" 
+            placeholder="Enter your email"
+            autoComplete="email"
             required
           />
-          
-          <label>Password:</label>
-          <input 
+
+          <label htmlFor="password">Password:</label>
+
+          <input
             type={showPasswords ? "text" : "password"}
             id="password"
             value={formData.password}
             onChange={handleChange}
-            placeholder="Enter your password (min 6 characters)" 
+            placeholder="Enter your password (min 8 characters)"
+            autoComplete="new-password"
             required
           />
-          
-          <label>Confirm Password:</label>
-          <input 
+
+          <label htmlFor="confirmPassword">
+            Confirm Password:
+          </label>
+
+          <input
             type={showPasswords ? "text" : "password"}
             id="confirmPassword"
             value={formData.confirmPassword}
             onChange={handleChange}
-            placeholder="Confirm your password" 
+            placeholder="Confirm your password"
+            autoComplete="new-password"
             required
           />
-          
+
           <div className="checkBlock">
             <label>
-              <input 
-                type="checkbox" 
+              <input
+                type="checkbox"
                 checked={showPasswords}
-                onChange={() => setShowPasswords(!showPasswords)}
+                onChange={() =>
+                  setShowPasswords(!showPasswords)
+                }
               />
               Show Passwords
             </label>
           </div>
-          
-          <label>Phone Number:</label>
-          <input 
-            type="tel" 
+
+          <label htmlFor="phone">Phone Number:</label>
+
+          <input
+            type="tel"
             id="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="+961 XX XXX XXX" 
+            placeholder="+961 XX XXX XXX"
+            autoComplete="tel"
             required
           />
-          
-          <label>Address:</label>
-          <input 
-            type="text" 
+
+          <label htmlFor="address">Address:</label>
+
+          <input
+            type="text"
             id="address"
             value={formData.address}
             onChange={handleChange}
-            placeholder="Enter your full address" 
+            placeholder="Enter your full address"
+            autoComplete="street-address"
             required
           />
-          
+
           <button type="submit" disabled={loading}>
-            {loading ? 'Creating account...' : 'Sign Up'}
+            {loading ? "Creating account..." : "Sign Up"}
           </button>
-          
+
           <p>
-            Already have an account? <Link to="/login">Login</Link>
+            Already have an account?{" "}
+            <Link to="/login">Login</Link>
           </p>
-          
-          {error && <p style={{color: 'red', marginTop: '10px'}}>{error}</p>}
+
+          {error && (
+            <p style={{ color: "red", marginTop: "10px" }}>
+              {error}
+            </p>
+          )}
         </form>
       </div>
     </div>
