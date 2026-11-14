@@ -1,0 +1,126 @@
+
+.cart-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.025);
+}
+
+.cart-card-image {
+  width: 115px;
+  height: 115px;
+  flex-shrink: 0;
+  background: #f4f8f5;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.cart-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cart-card-info {
+  flex: 1;
+}
+
+.cart-card-category {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.cart-card-info h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.cart-card-info p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.cart-remove-btn {
+  border: none;
+  background: transparent;
+  color: var(--danger);
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: 12px;
+  padding: 0;
+}
+
+.cart-remove-btn:hover {
+  text-decoration: underline;
+}
+
+.cart-card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cart-quantity button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: #f3f8f5;
+  color: var(--primary-dark);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cart-quantity button:hover:not(:disabled) {
+  background: var(--primary-light);
+}
+
+.cart-quantity button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.cart-quantity span {
+  width: 42px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cart-item-total {
+  font-size: 21px;
+  color: var(--primary-dark);
+}
+
+@media (max-width: 650px) {
+  .cart-card {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 15px;
+  }
+
+  .cart-card-image {
+    width: 85px;
+    height: 85px;
+  }
+
+  .cart-card-actions {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
