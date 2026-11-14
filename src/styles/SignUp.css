@@ -1,0 +1,358 @@
+
+.signup-page {
+  min-height: calc(100vh - 82px);
+  background: #f5faf7;
+}
+
+.signup-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  padding-top: 85px;
+  padding-bottom: 100px;
+}
+
+.signup-info {
+  padding: 30px 0;
+}
+
+.signup-brand {
+  display: inline-block;
+  color: var(--primary-dark);
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+.signup-brand span {
+  color: var(--primary);
+}
+
+.signup-welcome-label {
+  display: block;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+
+.signup-info h1 {
+  font-size: clamp(38px, 4vw, 55px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin-bottom: 25px;
+}
+
+.signup-info h1 span {
+  display: block;
+  color: var(--primary);
+}
+
+.signup-info > p {
+  max-width: 490px;
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+.signup-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.signup-benefits > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.signup-benefits span {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 50%;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.signup-info-bottom {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 65px;
+  padding: 20px 24px;
+  max-width: 420px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+}
+
+.signup-info-bottom span {
+  font-size: 30px;
+}
+
+.signup-info-bottom p {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.signup-form-wrapper {
+  width: 100%;
+  max-width: 500px;
+  justify-self: end;
+}
+
+.signup-form-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 42px;
+  box-shadow: 0 15px 50px rgba(20, 70, 40, 0.07);
+}
+
+.signup-form-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.signup-form-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  background: var(--primary-light);
+  border-radius: 17px;
+  font-size: 30px;
+}
+
+.signup-form-heading h2 {
+  font-size: 27px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.signup-form-heading p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.signup-form-group {
+  margin-bottom: 21px;
+}
+
+.signup-form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.signup-form-group > input,
+.signup-password-wrapper input {
+  width: 100%;
+  height: 49px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0 15px;
+  outline: none;
+  background: #fbfdfb;
+  color: var(--text);
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.signup-form-group input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(22, 131, 74, 0.1);
+}
+
+.signup-form-group input::placeholder {
+  color: #9daaa2;
+}
+
+.signup-password-wrapper {
+  position: relative;
+}
+
+.signup-password-wrapper input {
+  padding-right: 75px;
+}
+
+.signup-show-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px;
+}
+
+.signup-password-hint {
+  display: block;
+  color: var(--text-muted);
+  font-size: 11px;
+  margin-top: 7px;
+}
+
+.signup-submit-btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.signup-submit-btn:hover {
+  background: var(--primary-dark);
+}
+
+.signup-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 28px 0;
+}
+
+.signup-divider::before,
+.signup-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.signup-divider span {
+  color: var(--text-muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.signup-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 49px;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  background: white;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.signup-login-btn:hover {
+  background: var(--primary-light);
+}
+
+.signup-demo-note {
+  margin-top: 25px;
+  padding: 14px;
+  background: #f2f8f4;
+  border-radius: 10px;
+  color: #5d7967;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.signup-back-home {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.signup-back-home:hover {
+  color: var(--primary-dark);
+}
+
+@media (max-width: 1000px) {
+  .signup-container {
+    gap: 35px;
+  }
+
+  .signup-form-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    grid-template-columns: 1fr;
+    padding-top: 45px;
+    padding-bottom: 65px;
+  }
+
+  .signup-info {
+    text-align: center;
+    padding: 0;
+  }
+
+  .signup-brand {
+    margin-bottom: 25px;
+  }
+
+  .signup-info > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .signup-benefits {
+    align-items: center;
+  }
+
+  .signup-info-bottom {
+    margin: 35px auto 0;
+  }
+
+  .signup-form-wrapper {
+    max-width: 500px;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-info h1 {
+    font-size: 36px;
+  }
+
+  .signup-form-card {
+    padding: 28px 20px;
+  }
+
+  .signup-form-heading h2 {
+    font-size: 24px;
+  }
+
+  .signup-divider span {
+    font-size: 11px;
+  }
+}
