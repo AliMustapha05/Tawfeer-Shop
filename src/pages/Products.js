@@ -42,11 +42,7 @@ function Products() {
   const filteredProducts = productsData.filter((product) => {
     const searchText = search.toLowerCase().trim();
 
-    return (
-      product.name.toLowerCase().includes(searchText) ||
-      product.category.toLowerCase().includes(searchText) ||
-      product.description.toLowerCase().includes(searchText)
-    );
+    return product.name.toLowerCase().includes(searchText);
   });
 
   useEffect(() => {
