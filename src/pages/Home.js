@@ -34,22 +34,22 @@ function Home() {
   const categories = [
     {
       name: "Fruits & Vegetables",
-      image: "/images/backgrounds/fruits.jpg",
+      image: "/images/backgrounds/fruits.jpeg",
       category: "Fruits & Vegetables"
     },
     {
       name: "Dairy Products",
-      image: "/images/backgrounds/dairy.jpg",
+      image: "/images/backgrounds/dairy.jpeg",
       category: "Dairy"
     },
     {
       name: "Bakery",
-      image: "/images/backgrounds/bakery.jpg",
+      image: "/images/backgrounds/bakery.jpeg",
       category: "Bakery"
     },
     {
       name: "Beverages",
-      image: "/images/backgrounds/beverages.jpg",
+      image: "/images/backgrounds/beverages.jpeg",
       category: "Beverages"
     }
   ];
@@ -96,7 +96,7 @@ function Home() {
           <div className="home-hero-image">
             <div className="home-image-background">
               <img
-                src="/images/backgrounds/hero-groceries.png"
+                src="/images/backgrounds/hero-groceries.jpeg"
                 alt="Fresh groceries and supermarket products"
               />
             </div>

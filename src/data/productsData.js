@@ -5,7 +5,7 @@ const productsData = [
     name: "Fresh Apples",
     category: "Fruits & Vegetables",
     price: 2.5,
-    image: "/images/products/apples.jpg",
+    image: "/images/products/apples.jpeg",
     description: "Fresh and delicious red apples."
   },
   {
@@ -13,7 +13,7 @@ const productsData = [
     name: "Bananas",
     category: "Fruits & Vegetables",
     price: 1.8,
-    image: "/images/products/bananas.jpg",
+    image: "/images/products/bananas.jpeg",
     description: "Naturally sweet and fresh bananas."
   },
   {
@@ -21,7 +21,7 @@ const productsData = [
     name: "Tomatoes",
     category: "Fruits & Vegetables",
     price: 1.5,
-    image: "/images/products/tomatoes.jpg",
+    image: "/images/products/tomatoes.jpeg",
     description: "Fresh, ripe tomatoes."
   },
   {
@@ -29,7 +29,7 @@ const productsData = [
     name: "Potatoes",
     category: "Fruits & Vegetables",
     price: 1.2,
-    image: "/images/products/potatoes.jpg",
+    image: "/images/products/potatoes.jpeg",
     description: "Quality potatoes for everyday cooking."
   },
   {
@@ -37,7 +37,7 @@ const productsData = [
     name: "Cucumbers",
     category: "Fruits & Vegetables",
     price: 1.3,
-    image: "/images/products/cucumbers.jpg",
+    image: "/images/products/cucumbers.jpeg",
     description: "Crisp and refreshing cucumbers."
   },
   {
@@ -45,7 +45,7 @@ const productsData = [
     name: "Fresh Milk",
     category: "Dairy",
     price: 2.2,
-    image: "/images/products/milk.jpg",
+    image: "/images/products/milk.jpeg",
     description: "Fresh whole milk, 1 liter."
   },
   {
@@ -53,7 +53,7 @@ const productsData = [
     name: "Cheddar Cheese",
     category: "Dairy",
     price: 3.5,
-    image: "/images/products/cheese.jpg",
+    image: "/images/products/cheese.jpeg",
     description: "Rich and creamy cheddar cheese."
   },
   {
@@ -61,7 +61,7 @@ const productsData = [
     name: "Natural Yogurt",
     category: "Dairy",
     price: 1.5,
-    image: "/images/products/yogurt.jpg",
+    image: "/images/products/yogurt.jpeg",
     description: "Smooth and delicious natural yogurt."
   },
   {
@@ -69,7 +69,7 @@ const productsData = [
     name: "Butter",
     category: "Dairy",
     price: 2.8,
-    image: "/images/products/butter.jpg",
+    image: "/images/products/butter.jpeg",
     description: "Creamy butter for cooking and baking."
   },
   {
@@ -77,7 +77,7 @@ const productsData = [
     name: "Fresh Bread",
     category: "Bakery",
     price: 1.0,
-    image: "/images/products/bread.jpg",
+    image: "/images/products/bread.jpeg",
     description: "Freshly baked bread."
   },
   {
@@ -85,7 +85,7 @@ const productsData = [
     name: "Croissants",
     category: "Bakery",
     price: 2.5,
-    image: "/images/products/croissants.jpg",
+    image: "/images/products/croissants.jpeg",
     description: "Soft and buttery croissants."
   },
   {
@@ -93,7 +93,7 @@ const productsData = [
     name: "Chocolate Cake",
     category: "Bakery",
     price: 5.0,
-    image: "/images/products/cake.jpg",
+    image: "/images/products/cake.jpeg",
     description: "Delicious chocolate cake."
   },
   {
@@ -101,7 +101,7 @@ const productsData = [
     name: "Orange Juice",
     category: "Beverages",
     price: 2.0,
-    image: "/images/products/orange-juice.jpg",
+    image: "/images/products/orange-juice.jpeg",
     description: "Refreshing orange juice, 1 liter."
   },
   {
@@ -109,7 +109,7 @@ const productsData = [
     name: "Mineral Water",
     category: "Beverages",
     price: 0.75,
-    image: "/images/products/water.jpg",
+    image: "/images/products/water.jpeg",
     description: "Pure mineral water."
   },
   {
@@ -117,7 +117,7 @@ const productsData = [
     name: "Cola",
     category: "Beverages",
     price: 1.25,
-    image: "/images/products/cola.jpg",
+    image: "/images/products/cola.jpeg",
     description: "Refreshing carbonated soft drink."
   },
   {
@@ -125,7 +125,7 @@ const productsData = [
     name: "Coffee",
     category: "Beverages",
     price: 4.5,
-    image: "/images/products/coffee.jpg",
+    image: "/images/products/coffee.jpeg",
     description: "Rich and aromatic coffee."
   },
   {
@@ -133,7 +133,7 @@ const productsData = [
     name: "White Rice",
     category: "Pantry",
     price: 3.0,
-    image: "/images/products/rice.jpg",
+    image: "/images/products/rice.jpeg",
     description: "Premium white rice, 1 kg."
   },
   {
@@ -141,7 +141,7 @@ const productsData = [
     name: "Pasta",
     category: "Pantry",
     price: 1.5,
-    image: "/images/products/pasta.jpg",
+    image: "/images/products/pasta.jpeg",
     description: "Quality pasta for delicious meals."
   },
   {
@@ -149,7 +149,7 @@ const productsData = [
     name: "Olive Oil",
     category: "Pantry",
     price: 6.5,
-    image: "/images/products/olive-oil.jpg",
+    image: "/images/products/olive-oil.jpeg",
     description: "Pure olive oil for everyday cooking."
   },
   {
@@ -157,7 +157,7 @@ const productsData = [
     name: "Sugar",
     category: "Pantry",
     price: 1.75,
-    image: "/images/products/sugar.jpg",
+    image: "/images/products/sugar.jpeg",
     description: "Fine white sugar, 1 kg."
   },
   {
@@ -165,7 +165,7 @@ const productsData = [
     name: "Chicken Breast",
     category: "Meat & Poultry",
     price: 5.5,
-    image: "/images/products/chicken.jpg",
+    image: "/images/products/chicken.jpeg",
     description: "Fresh boneless chicken breast."
   },
   {
@@ -173,7 +173,7 @@ const productsData = [
     name: "Beef",
     category: "Meat & Poultry",
     price: 9.0,
-    image: "/images/products/beef.jpg",
+    image: "/images/products/beef.jpeg",
     description: "Quality fresh beef."
   },
   {
@@ -181,7 +181,7 @@ const productsData = [
     name: "Potato Chips",
     category: "Snacks",
     price: 1.5,
-    image: "/images/products/chips.jpg",
+    image: "/images/products/chips.jpeg",
     description: "Crispy salted potato chips."
   },
   {
@@ -189,7 +189,7 @@ const productsData = [
     name: "Chocolate Bar",
     category: "Snacks",
     price: 1.25,
-    image: "/images/products/chocolate.jpg",
+    image: "/images/products/chocolate.jpeg",
     description: "Delicious milk chocolate."
   }
 ];

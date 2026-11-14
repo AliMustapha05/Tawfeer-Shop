@@ -75,7 +75,7 @@ function About() {
 
           <div className="about-intro-image">
             <img
-              src="/images/backgrounds/about-supermarket.jpg"
+              src="/images/backgrounds/about-supermarket.jpeg"
               alt="Fresh groceries and supermarket products"
             />
 
